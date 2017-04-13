@@ -1,7 +1,6 @@
-- name: Default Playbook for bcgaudio.com domain
+- name: Hello World Sample
   hosts: all
   tasks:
-   - name: Install needed packages
-     yum:
-        name: bind-utils
-        state: latest
+    - name: Hello Message
+      debug:
+        msg: "Hello World!"
