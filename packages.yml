@@ -1,11 +1,7 @@
-- name: Hello World Sample
+- name: Default Playbook for bcgaudio.com domain
   hosts: all
   tasks:
    - name: Install needed packages
-     yum: name={{item}} state=installed
-     with_items:
-        - vim
-        - bind-utils
-        - mc
-        - wget
-        - krb5-workstation
+     yum:
+        name: bind-utils
+        state: latest
