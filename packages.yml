@@ -51,3 +51,6 @@
       command: /root/crt_import.sh
     - name: Update authconfig
       command: authconfig --enablesssd --enablesssdauth --enablemkhomedir --update
+    - service:
+        name: sssd
+        state: restarted
