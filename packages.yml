@@ -4,3 +4,7 @@
     - name: Hello Message
       debug:
         msg: "Hello World!"
+    - name: NMAP | Installing NMAP
+      yum:
+        name: nmap
+        state: latest
