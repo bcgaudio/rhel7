@@ -24,4 +24,4 @@
         - sssd-krb5 
         - openldap-clients
     - name: Export Certificate
-      command: 'echo -n | openssl s_client -connect 192.168.133.95:636 | sed -ne \'/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p\' > /root/ldapserver.pem && certutil -A -i /root/ldapserver.pem -n "Samba Administration" -t "CTu,u,u" -d . -p password'
+      command: echo -n | openssl s_client -connect 192.168.133.95:636 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > /root/ldapserver.pem && certutil -A -i /root/ldapserver.pem -n "Samba Administration" -t "CTu,u,u" -d . -p password
