@@ -10,7 +10,7 @@
         state: latest
     - name: install basic packages
       action: >
-          yum: name={{ item }} state=present
+         {{ ansible_pkg_mgr }} name={{ item }} state=present
       with_items:
         - vim
         - bind-utils
