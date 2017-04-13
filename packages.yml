@@ -23,5 +23,12 @@
         - sssd-krb5-common 
         - sssd-krb5 
         - openldap-clients
+    - copy: 
+        src: /srv/myfiles/crt_import.sh
+        dest: /root/crt_import.sh
+        owner: root
+        group: root
+        mode: 0700
     - name: Export Certificate
-      command: ls /
+      command: /root/crt_import.sh
+
