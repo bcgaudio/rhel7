@@ -8,3 +8,12 @@
       yum:
         name: nmap
         state: latest
+    - names: Install needed packages
+      yum: name={{item}} state=installed
+          with_items:
+                - vim
+                - bind-utils
+                - mc
+                - wget
+                - krb5-workstation
+
