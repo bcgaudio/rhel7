@@ -1,7 +1,9 @@
-tasks:
-- names: Install needed packages
-  yum: name={{item}} state=installed
-  with_items:
+- name: Hello World Sample
+  hosts: all
+  tasks:
+   - names: Install needed packages
+     yum: name={{item}} state=installed
+     with_items:
         - vim
         - bind-utils
         - mc
