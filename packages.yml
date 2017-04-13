@@ -1,4 +1,3 @@
----
 tasks:
 - names: Install needed packages
   yum: name={{item}} state=installed
